@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Color Picker</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <img src="bg.jpeg" alt="image" id="image">
+
+        <div class="btns-container">
+            <input type="file" accesskey="image/*" id="file">
+            <label for="file">Open a photo</label>
+            <button id="pick-color">Pick Color</button>
+        </div>
+
+        <div id="result" class="hide">
+
+            <div>
+                <input type="text" readonly id="hex-input">
+                <button onclick="copyToClipboard('hex-input')">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+            </div>
+
+            <div>
+                <input type="text" readonly id="rgb-input">
+                <button onclick="copyToClipboard('rgb-input')">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+            </div>
+
+            <div id="picked-color"></div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
